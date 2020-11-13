@@ -1,8 +1,6 @@
 #ifndef _STACKLISTAENCADEADA_C_
 #define _STACKLISTAENCADEADA_C_
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "stackListaEncadeada.h"
 
 struct stack
@@ -11,7 +9,7 @@ struct stack
     struct stack* elAnterior;
 };
 
-Stack * stack_create(int info)
+Stack * stackCreate(int info)
 {
     Stack * st = (Stack*) malloc(sizeof(Stack));
     if(st){
@@ -21,12 +19,12 @@ Stack * stack_create(int info)
     return st;
 }
 
-int stack_is_empty(Stack* st)
+int stackIsEmpty(Stack* st)
 {
     return (st == NULL);
 }
 
-int stack_size(Stack* st)
+int stackSize(Stack* st)
 {
     int counter = 0;
     Stack* stCpy = (Stack*) malloc(sizeof(Stack));
@@ -45,7 +43,7 @@ int stack_size(Stack* st)
     return 0;
 }
 
-int stack_push(Stack* st, int info)
+int stackPush(Stack* st, int info)
 {
     if(st)
     {
@@ -64,23 +62,21 @@ int stack_push(Stack* st, int info)
     return 0;
 }
 
-int stack_pop(Stack** st)
+int stackPop(Stack** st)
 {
     if(st)
     {
-        Stack* stTemp = (Stack*) malloc(sizeof(Stack));
         *st = (*st)->elAnterior;
-        free(stTemp);
         return 1;
     }
     
     return 0;
 }
 
-void stack_clear(Stack** st)
+void stackClear(Stack** st)
 {
     while(*st)
-        stack_pop(st);
+        stackPop(st);
 }
 
 #endif

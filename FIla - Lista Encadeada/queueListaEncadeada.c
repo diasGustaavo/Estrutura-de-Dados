@@ -1,9 +1,7 @@
 #ifndef _QUEUELISTAENCADEADA_C_
 #define _QUEUELISTAENCADEADA_C_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "queue.h"
+#include "queueListaEncadeada.h"
 
 struct queue
 {
@@ -11,7 +9,7 @@ struct queue
     struct queue* elProx;
 };
 
-Queue * queue_create(int info)
+Queue * queueCreate(int info)
 {
     Queue * st = (Queue*) malloc(sizeof(Queue));
     if(st){
@@ -21,12 +19,12 @@ Queue * queue_create(int info)
     return st;
 }
 
-int queue_is_empty(Queue* st)
+int queueIsEmpty(Queue* st)
 {
     return (st == NULL);
 }
 
-int queue_size(Queue* st)
+int queueSize(Queue* st)
 {
     int counter = 0;
     Queue* stCpy = (Queue*) malloc(sizeof(Queue));
@@ -86,7 +84,7 @@ int dequeue(Queue** st)
     return 0;
 }
 
-void queue_clear(Queue** st)
+void queueClear(Queue** st)
 {
     while(*st)
         dequeue(st);

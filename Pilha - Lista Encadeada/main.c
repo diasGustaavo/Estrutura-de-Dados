@@ -4,69 +4,69 @@
 
 int main(void)
 {
-    Stack* st = stack_create(1);
+    Stack* st = stackCreate(1);
 
-    if(stack_push(st, 2))
+    if(stackPush(st, 2))
       printf("push valor: %d\n", 2);
 
-    printf("tamanho da stack: %d\n", stack_size(st));
+    printf("tamanho da stack: %d\n", stackSize(st));
 
-    if(stack_push(st, 3))
+    if(stackPush(st, 3))
       printf("push valor: %d\n", 3);
 
-    printf("tamanho da stack: %d\n", stack_size(st));
+    printf("tamanho da stack: %d\n", stackSize(st));
 
-    if(stack_push(st, 4))
+    if(stackPush(st, 4))
       printf("push valor: %d\n", 4);
 
-    printf("tamanho da stack: %d\n", stack_size(st));
+    printf("tamanho da stack: %d\n", stackSize(st));
 
-    if(stack_push(st, 5))
+    if(stackPush(st, 5))
       printf("push valor: %d\n", 5);
 
-    printf("tamanho da stack: %d\n", stack_size(st));
+    printf("tamanho da stack: %d\n", stackSize(st));
 
-    if(stack_push(st, 6))
+    if(stackPush(st, 6))
       printf("push valor: %d\n", 6);
 
-    printf("tamanho da stack: %d\n", stack_size(st));
+    printf("tamanho da stack: %d\n", stackSize(st));
 
-    stack_clear(&st);
+    stackClear(&st);
 
-    Stack* st2 = stack_create(1);
+    Stack* st2 = stackCreate(1);
 
-    printf("\n\ntamanho: %d\n", stack_size(st2));
+    printf("\n\ntamanho: %d\n", stackSize(st2));
 
-    if(stack_push(st2, 2))
+    if(stackPush(st2, 2))
       printf("push valor: %d\n", 2);
 
-    printf("tamanho da stack: %d\n", stack_size(st2));
+    printf("tamanho da stack: %d\n", stackSize(st2));
 
-    if(stack_push(st2, 3))
+    if(stackPush(st2, 3))
       printf("push valor: %d\n", 3);
 
-    printf("tamanho da stack: %d\n", stack_size(st2));
+    printf("tamanho da stack: %d\n", stackSize(st2));
 
-    if(stack_push(st2, 4))
+    if(stackPush(st2, 4))
       printf("push valor: %d\n", 4);
 
-    printf("tamanho da stack: %d\n", stack_size(st2));
+    printf("tamanho da stack: %d\n", stackSize(st2));
 
-    if(stack_push(st2, 5))
+    if(stackPush(st2, 5))
       printf("push valor: %d\n", 5);
 
-    printf("tamanho da stack: %d\n", stack_size(st2));
+    printf("tamanho da stack: %d\n", stackSize(st2));
 
-    if(stack_push(st2, 6))
+    if(stackPush(st2, 6))
       printf("push valor: %d\n", 6);
 
-    printf("tamanho da stack: %d\n", stack_size(st2));
+    printf("tamanho da stack: %d\n", stackSize(st2));
 
 
    int i;
     for(i=1; i <=6; i++){
-      if(stack_pop(&st2))
-            printf("valor: %d tamanho: %d\n", i, stack_size(st2));
+      if(stackPop(&st2))
+            printf("valor: %d tamanho: %d\n", i, stackSize(st2));
     }
 
  return 0;   
