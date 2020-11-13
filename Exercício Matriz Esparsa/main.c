@@ -33,8 +33,8 @@ int main()
     printf("OBS: SE A MATRIZ APARECER DESPROPORCIONAL FAVOR ABRIR O TERMINAL EM TELA CHEIA\n");
     inserirValorNaPosicao(&matriz1, 9, 9, 12345678.9);
     imprimirMatriz(matriz1);
-
-    void removerMatriz(&matriz1);
+    
+    removerMatriz(&matriz1);
   
     return 0;
 
